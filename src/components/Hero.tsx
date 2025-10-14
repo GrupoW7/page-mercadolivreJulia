@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquare, TrendingUp } from "lucide-react";
-import heroImage from "@/assets/hero-ai-chat.jpg";
 import logo from "@/assets/logo.png";
 
 export const Hero = () => {
@@ -13,8 +12,8 @@ export const Hero = () => {
         <div className="flex justify-center lg:justify-start mb-8 pt-8">
           <img src={logo} alt="Logo" className="h-12 md:h-16" />
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+        <div className="flex justify-center items-center">
+          <div className="text-center space-y-8 animate-in fade-in duration-1000 max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
               <MessageSquare className="h-4 w-4" />
               <span>Atendimento Inteligente 24/7</span>
@@ -31,7 +30,7 @@ export const Hero = () => {
               O melhor investimento para sua operação.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" className="group">
                 Começar Agora
                 <TrendingUp className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -41,7 +40,7 @@ export const Hero = () => {
               </Button>
             </div>
             
-            <div className="flex items-center gap-8 justify-center lg:justify-start pt-4">
+            <div className="flex items-center gap-8 justify-center pt-4">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">25%</div>
                 <div className="text-sm text-muted-foreground">Aumento em Vendas</div>
@@ -57,17 +56,6 @@ export const Hero = () => {
                 <div className="text-sm text-muted-foreground">Automático</div>
               </div>
             </div>
-          </div>
-          
-          <div className="relative animate-in fade-in slide-in-from-right duration-1000 delay-300">
-            <div className="relative z-10 animate-float">
-              <img
-                src={heroImage}
-                alt="IA Chatbot para Mercado Livre - Atendimento automatizado"
-                className="w-full rounded-2xl shadow-2xl"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-accent opacity-20 blur-3xl animate-pulse-slow" />
           </div>
         </div>
       </div>
