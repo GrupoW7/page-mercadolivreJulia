@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(52,131,250,0.1),transparent_50%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex justify-center lg:justify-start mb-8 pt-8">
+        <div className="flex justify-center mb-8 pt-8">
           <img src={logo} alt="Logo" className="h-12 md:h-16" />
         </div>
         <div className="flex justify-center items-center">
