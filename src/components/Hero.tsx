@@ -25,7 +25,7 @@ export const Hero = () => {
               <span className="text-secondary">IA</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Atenda seus clientes em tempo real e aumente suas vendas. 
               O melhor investimento para sua operação.
             </p>
