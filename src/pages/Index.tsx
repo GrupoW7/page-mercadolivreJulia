@@ -74,16 +74,16 @@ const steps = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-secondary/5">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-secondary/5" aria-label="Seção principal de apresentação">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,230,0,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(52,131,250,0.1),transparent_50%)]" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex justify-center mb-8 pt-8">
-            <img src={logo} alt="Logo" className="h-12 md:h-16" />
-          </div>
+          <header className="flex justify-center mb-8 pt-8">
+            <img src={logo} alt="IA Mercado Livre - Atendimento automatizado com inteligência artificial" className="h-12 md:h-16" />
+          </header>
           <div className="flex justify-center items-center">
             <div className="text-center space-y-8 animate-in fade-in duration-1000 max-w-4xl">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
@@ -147,7 +147,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+      <section className="py-24 bg-gradient-to-b from-background to-muted/30" aria-label="Principais benefícios e recursos">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -170,8 +170,9 @@ const Index = () => {
                     <div className="relative">
                       <img 
                         src={feature.icon} 
-                        alt={feature.title}
+                        alt={`Ícone representando ${feature.title} - ${feature.description}`}
                         className="w-20 h-20 rounded-xl shadow-md group-hover:shadow-lg transition-shadow"
+                        loading="lazy"
                       />
                       <div className="absolute -top-2 -right-2 bg-primary rounded-full p-2 shadow-md">
                         <Icon className="h-5 w-5 text-primary-foreground" />
@@ -191,7 +192,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5 relative overflow-hidden" aria-label="Estatísticas e resultados comprovados">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9nPjwvc3ZnPg==')] opacity-30" />
         
         <div className="container mx-auto px-4 relative z-10">
@@ -231,7 +232,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background" aria-label="Como funciona o processo de implementação">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -275,7 +276,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden" aria-label="Chamada para ação - Comece agora">
         <div className="absolute inset-0 bg-gradient-accent opacity-10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,230,0,0.15),transparent_70%)]" />
         
@@ -335,7 +336,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 
