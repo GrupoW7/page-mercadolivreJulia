@@ -103,12 +103,25 @@ const Index = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" className="group">
-                  Começar Agora
-                  <TrendingUp className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button 
+                  variant="hero" 
+                  size="xl" 
+                  className="group"
+                  asChild
+                >
+                  <a href="https://wa.me/5519989728022?text=Quero%20conhecer%20mais%20sobre%20a%20solu%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
+                    Começar Agora
+                    <TrendingUp className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="xl">
-                  Ver Demonstração
+                <Button 
+                  variant="outline" 
+                  size="xl"
+                  asChild
+                >
+                  <a href="https://wa.me/5519989728022?text=Quero%20conhecer%20mais%20sobre%20a%20solu%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
+                    Ver Demonstração
+                  </a>
                 </Button>
               </div>
               
@@ -283,12 +296,25 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button variant="hero" size="xl" className="group">
-                Começar Gratuitamente
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="group"
+                asChild
+              >
+                <a href="https://wa.me/5519989728022?text=Quero%20conhecer%20mais%20sobre%20a%20solu%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
+                  Começar Gratuitamente
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="outline" size="xl">
-                Falar com Especialista
+              <Button 
+                variant="outline" 
+                size="xl"
+                asChild
+              >
+                <a href="https://wa.me/5519989728022?text=Quero%20conhecer%20mais%20sobre%20a%20solu%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">
+                  Falar com Especialista
+                </a>
               </Button>
             </div>
             
