@@ -5,7 +5,6 @@ import logo from "@/assets/logo.png";
 import icon247 from "@/assets/icon-24-7.jpg";
 import iconSales from "@/assets/icon-sales.jpg";
 import iconAutomation from "@/assets/icon-automation.jpg";
-import heroVideo from "@/assets/hero-video.mp4";
 
 const features = [
   {
@@ -126,19 +125,7 @@ const Index = () => {
                 </Button>
               </div>
               
-              <div className="mt-8 max-w-3xl mx-auto">
-                <video 
-                  src={heroVideo}
-                  controls
-                  className="w-full rounded-2xl shadow-2xl border-4 border-primary/20"
-                  poster=""
-                  aria-label="Vídeo de demonstração do atendimento automatizado com IA"
-                >
-                  Seu navegador não suporta a tag de vídeo.
-                </video>
-              </div>
-
-              <div className="flex items-center gap-8 justify-center pt-8">
+              <div className="flex items-center gap-8 justify-center pt-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">25%</div>
                   <div className="text-sm text-muted-foreground">Aumento em Vendas</div>
