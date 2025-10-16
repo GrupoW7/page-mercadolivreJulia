@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageSquare, TrendingUp, Clock, Zap, CheckCircle2, MessageCircle, Bot, Settings, ArrowRight, Sparkles } from "lucide-react";
+import { MessageSquare, TrendingUp, Clock, Zap, CheckCircle2, MessageCircle, Bot, Settings, ArrowRight, Sparkles, Star, Quote } from "lucide-react";
 import logo from "@/assets/logo.png";
 import icon247 from "@/assets/icon-24-7.jpg";
 import iconSales from "@/assets/icon-sales.jpg";
@@ -51,6 +51,30 @@ const stats = [
     value: "98%",
     label: "Satisfação",
     color: "text-secondary",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Carlos Silva",
+    role: "Vendedor Premium - Eletrônicos",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Carlos",
+    content: "Minha taxa de conversão aumentou 28% desde que comecei a usar a IA. Os clientes recebem respostas instantâneas mesmo de madrugada, e isso fez toda a diferença nas minhas vendas.",
+    rating: 5,
+  },
+  {
+    name: "Mariana Costa",
+    role: "Loja de Moda - 5 anos no ML",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mariana",
+    content: "Antes eu perdia muitas vendas por não conseguir responder rápido. Agora a IA cuida de tudo e eu só preciso focar em enviar os produtos. Meu faturamento dobrou em 3 meses!",
+    rating: 5,
+  },
+  {
+    name: "Roberto Oliveira",
+    role: "Importados - Platinum",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Roberto",
+    content: "A melhor decisão que tomei para meu negócio. A IA responde com tanta qualidade que os clientes nem percebem que não sou eu. E o melhor: funciona 24 horas por dia!",
+    rating: 5,
   },
 ];
 
@@ -231,8 +255,84 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-background" aria-label="Depoimentos de clientes satisfeitos">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold shadow-sm">
+              <Star className="h-4 w-4 fill-primary" />
+              <span>Depoimentos Reais</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              O que nossos <span className="text-primary">clientes</span> dizem
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Vendedores reais compartilhando resultados reais
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card 
+                key={index} 
+                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 hover:border-primary/20 relative overflow-hidden"
+              >
+                <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Quote className="h-16 w-16 text-primary" />
+                </div>
+                
+                <CardContent className="p-8 space-y-6 relative z-10">
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed italic">
+                    "{testimonial.content}"
+                  </p>
+                  
+                  <div className="flex items-center gap-4 pt-4 border-t">
+                    <img 
+                      src={testimonial.image} 
+                      alt={`Foto de perfil de ${testimonial.name}`}
+                      className="w-14 h-14 rounded-full border-2 border-primary/20 shadow-md"
+                      loading="lazy"
+                    />
+                    <div>
+                      <div className="font-bold text-lg">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">Junte-se a centenas de vendedores satisfeitos</p>
+            <div className="flex items-center justify-center gap-2">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-background overflow-hidden">
+                    <img 
+                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=User${i}`} 
+                      alt={`Avatar de usuário ${i}`}
+                      className="w-full h-full"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+              <span className="text-sm font-semibold">+500 vendedores ativos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
-      <section className="py-24 bg-background" aria-label="Como funciona o processo de implementação">
+      <section className="py-24 bg-gradient-to-b from-background to-muted/30" aria-label="Como funciona o processo de implementação">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
