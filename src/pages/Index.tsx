@@ -134,7 +134,7 @@ const Index = () => {
                   asChild
                 >
                   <a href="https://www.hellojulia.com.br/formulario" target="_blank" rel="noopener noreferrer">
-                    Começar Agora
+                    Testar
                     <TrendingUp className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
