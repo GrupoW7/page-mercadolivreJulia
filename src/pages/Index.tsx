@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, TrendingUp, Clock, Zap, CheckCircle2, MessageCircle, Bot, Settings, ArrowRight, Sparkles, Star, Quote } from "lucide-react";
@@ -97,6 +98,25 @@ const steps = [
 ];
 
 const Index = () => {
+  useEffect(() => {
+    // Configure widget
+    (window as any).ZWidget = {
+      AgentURL: "https://platform.hellojulia.com.br/embed/chat/67174",
+    };
+
+    // Load widget script
+    const script = document.createElement('script');
+    script.src = "https://platform.hellojulia.com.br/script/widget-loader.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Cleanup on unmount
+    return () => {
+      document.body.removeChild(script);
+      delete (window as any).ZWidget;
+    };
+  }, []);
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
